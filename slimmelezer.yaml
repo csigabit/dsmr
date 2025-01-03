@@ -90,14 +90,14 @@ dsmr:
 
 sensor:
   - platform: dsmr
-    energy_delivered_lux:
-      name: "Energy Consumed Luxembourg"
+    energy_delivered:
+      name: "Energy Consumed"
     energy_delivered_tariff1:
       name: "Energy Consumed Tariff 1"
     energy_delivered_tariff2:
       name: "Energy Consumed Tariff 2"
-    energy_returned_lux:
-      name: "Energy Produced Luxembourg"
+    energy_returned:
+      name: "Energy Produced"
     energy_returned_tariff1:
       name: "Energy Produced Tariff 1"
     energy_returned_tariff2:
@@ -108,6 +108,12 @@ sensor:
     power_returned:
       name: "Power Produced"
       accuracy_decimals: 3
+    electricity_tariff:
+      name: "Electricity Tariff"
+    frequency:
+      name: "Frequency"
+    energy_absolute:
+      name: "Absolute active energy"
     electricity_failures:
       name: "Electricity Failures"
       icon: mdi:alert
@@ -144,10 +150,7 @@ sensor:
     power_returned_l3:
       name: "Power Produced Phase 3"
       accuracy_decimals: 3
-    gas_delivered:
-      name: "Gas Consumed"
-    gas_delivered_be:
-      name: "Gas Consumed Belgium"
+
   - platform: uptime
     name: "SlimmeLezer Uptime"
   - platform: wifi_signal
@@ -157,11 +160,11 @@ sensor:
 text_sensor:
   - platform: dsmr
     identification:
-      name: "DSMR Identification"
-    p1_version:
-      name: "DSMR Version"
-    p1_version_be:
-      name: "DSMR Version Belgium"
+      name: "DSMR Id"
+    equipment_id:
+      name: "Equipment Id"
+    breaker_status:
+      name: "Breaker Status"
   - platform: wifi_info
     ip_address:
       name: "SlimmeLezer IP Address"
